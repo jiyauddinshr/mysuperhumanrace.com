@@ -1,0 +1,16 @@
+name: Deploying Process
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  deploy:
+    name: Deploying the SHR Demo
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Copy files to root directory
+      run: cp -rf ./ /var/www/html/
