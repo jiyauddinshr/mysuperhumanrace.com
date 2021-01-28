@@ -3,7 +3,7 @@ name: Deploying Process
 on:
   push:
     branches: 
-      - main
+      - shr-demp
 
 jobs:
   deploy:
